@@ -8,14 +8,6 @@ var getCost = function (ele) {
   return cost;
 }
 
-
-
-$(document).ready(function() {
-  $('tbody .itemRow').each(function (i, ele) {
-    getCost(ele);
-  });
-});
-
 var sum = function(acc, x) { return acc + x; };
 
 var getTotalCart = function () {
@@ -38,4 +30,21 @@ $(document).ready(function() {
     $(this).closest('tr').remove();
     getTotalCart();
   })
+
+  $(document).on('input', 'tr input', function () {
+    getTotalCart();
+  });
+  
+  $('#addItemRow').on('submit', function(event) {
+    event.preventDefault();
+    var item = $(this).children('.addName').val();
+    var price = $(this).children('.addPrice').val();
+
+    $('tbody').append('<tr class="itemRow">' + '<td class="name">' + item + '</td>' + '<td class="price">' + price + '</td>' + '<td class="qty"><input type="number" value="0"></td>' + '<td class="cost"></td>' + '<td><button class="btn btn-light btn-sm remove"><i class="fa-regular fa-circle-xmark"></i></button></td>' + '</tr>');
+
+    getTotalCart();
+    $(this).children('.addName').val('');
+    $(this).children('.addPrice').val('');
+  });
 });
+

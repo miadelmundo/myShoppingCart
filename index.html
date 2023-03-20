@@ -37,7 +37,7 @@
               <tr class="itemRow">
                 <td class="name">Peaches</td>
                 <td class="price">5.00</td>
-                <td class="qty"><input type="number" value="5"></td>
+                <td class="qty"><input type="number" value="0"></td>
                 <td class="cost"></td>
                 <td><button class="btn btn-light btn-sm remove"><i class="fa-regular fa-circle-xmark"></i></button></td>
               </tr>
@@ -69,15 +69,18 @@
                 <td class="cost"></td>
                 <td><button class="btn btn-light btn-sm remove"><i class="fa-regular fa-circle-xmark"></i></button></td>
               </tr>
-              
-              <tr class="addItemRow">
-                <td><input class="addName" type="text" placeholder="item name"></td>
-                <td><input class="addPrice" type="number" placeholder="price">
-                <td><button class="btn btn-primary btn-sm addButton">add</button></td>
-                <td colspan="2"></td>
-              </tr>  
-            <tbody>
-               
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="5">
+                  <form id="addItemRow">
+                    <input class="addName" type="text" placeholder="item name">
+                    <input class="addPrice" type="number" placeholder="price">
+                    <button class="btn btn-primary btn-sm addButton">add</button>
+                  </form>
+                </td>                               
+              </tr>   
+            </tfoot>  
           </table>
         </div>
       </div>  
