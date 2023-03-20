@@ -10,11 +10,77 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/application.js"></script>
+    <script src="https://kit.fontawesome.com/1baaba8f34.js" crossorigin="anonymous"></script>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
   </head>
   <body>
-
+    <div class="container">
+      <div class="header">
+        <h1>Shopping Cart</h1>
+        <h3>Total Cart: $<span id="totalCart"></span></h3>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <table class="table table-responsive">
+            <thead>
+              <tr>
+                <th scope="col">Item</th>
+                <th scope="col">Price ($)</th>
+                <th scope="col">Qty</th>
+                <th scope="col">Cost ($)</th>
+                <th scope="col"></th>
+              </tr>  
+            <thead>
+            <tbody>
+              <tr class="itemRow">
+                <td class="name">Peaches</td>
+                <td class="price">5.00</td>
+                <td class="qty"><input type="number" value="0"></td>
+                <td class="cost"></td>
+                <td><button class="btn btn-light btn-sm remove"><i class="fa-regular fa-circle-xmark"></i></button></td>
+              </tr>
+              <tr class="itemRow">
+                <td class="name">Shrimps</td>
+                <td class="price">10.00</td>
+                <td class="qty"><input type="number" value="0"></td>
+                <td class="cost"></td>
+                <td><button class="btn btn-light btn-sm remove"><i class="fa-regular fa-circle-xmark"></i></button></td>
+              </tr>
+              <tr class="itemRow">
+                <td class="name">Milk</td>
+                <td class="price">5.60</td>
+                <td class="qty"><input type="number" value="0"></td>
+                <td class="cost"></td>
+                <td><button class="btn btn-light btn-sm remove"><i class="fa-regular fa-circle-xmark"></i></button></td>
+              </tr>
+              <tr class="itemRow">
+                <td class="name">Cereals</td>
+                <td class="price">6.40</td>
+                <td class="qty"><input type="number" value="0"></td>
+                <td class="cost"></td>
+                <td><button class="btn btn-light btn-sm remove"><i class="fa-regular fa-circle-xmark"></i></button></td>
+              </tr>
+              <tr class="itemRow">
+                <td class="name">Yogurt</td>
+                <td class="price">4.30</td>
+                <td class="qty"><input type="number" value="0"></td>
+                <td class="cost"></td>
+                <td><button class="btn btn-light btn-sm remove"><i class="fa-regular fa-circle-xmark"></i></button></td>
+              </tr>
+              
+              <tr class="addItemRow">
+                <td><input class="addName" type="text" placeholder="item name"></td>
+                <td><input class="addPrice" type="number" placeholder="price">
+                <td><button class="btn btn-primary btn-sm addButton">add</button></td>
+                <td colspan="2"></td>
+              </tr>  
+            <tbody>
+               
+          </table>
+        </div>
+      </div>  
+    </div>
   </body>
 </html>
