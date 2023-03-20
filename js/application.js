@@ -8,9 +8,29 @@ var getCost = function (ele) {
   return cost;
 }
 
+
+
 $(document).ready(function() {
   $('tbody .itemRow').each(function (i, ele) {
     getCost(ele);
   });
+});
 
- });
+var sum = function(acc, x) { return acc + x; };
+
+var getTotalCart = function () {
+  var itemCosts = [];
+  
+  $('tbody .itemRow').each(function (i, ele) {
+    var itemCost = getCost(ele);
+    itemCosts.push(itemCost);
+  });
+
+  var totalCart = itemCosts.reduce(sum);
+
+  $('#totalCart').html(totalCart);
+}
+
+$(document).ready(function() {
+  getTotalCart();
+});
