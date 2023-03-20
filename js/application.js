@@ -33,4 +33,9 @@ var getTotalCart = function () {
 
 $(document).ready(function() {
   getTotalCart();
+
+  $(document).on('click', '.btn.remove', function (event) {
+    $(this).closest('tr').remove();
+    getTotalCart();
+  })
 });
