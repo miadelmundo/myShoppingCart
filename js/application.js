@@ -3,7 +3,7 @@ var getCost = function (ele) {
   var qty = parseFloat($(ele).find('.qty input').val());
 
   var cost = price * qty;
-  $(ele).children('.cost').html(cost);
+  $(ele).children('.cost').html(cost.toFixed(2));
 
   return cost;
 }
@@ -20,7 +20,7 @@ var getTotalCart = function () {
 
   var totalCart = itemCosts.reduce(sum);
 
-  $('#totalCart').html(totalCart);
+  $('#totalCart').html(totalCart.toFixed(2));
 }
 
 $(document).ready(function() {
@@ -40,7 +40,7 @@ $(document).ready(function() {
     var item = $(this).children('.addName').val();
     var price = $(this).children('.addPrice').val();
 
-    $('tbody').append('<tr class="itemRow">' + '<td class="name">' + item + '</td>' + '<td class="price">' + price + '</td>' + '<td class="qty"><input type="number" value="0"></td>' + '<td class="cost"></td>' + '<td><button class="btn btn-light btn-sm remove"><i class="fa-regular fa-circle-xmark"></i></button></td>' + '</tr>');
+    $('tbody').append('<tr class="itemRow">' + '<td class="name">' + item + '</td>' + '<td class="price">' + price + '</td>' + '<td class="qty"><input type="number" value="0" min="0"></td>' + '<td class="cost"></td>' + '<td><button class="btn btn-light btn-sm remove"><i class="fa-regular fa-circle-xmark"></i></button></td>' + '</tr>');
 
     getTotalCart();
     $(this).children('.addName').val('');

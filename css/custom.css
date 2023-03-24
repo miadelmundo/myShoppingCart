@@ -1,0 +1,27 @@
+.qty input {
+  width: 60px;
+}
+
+.addPrice {
+  width: 80px;
+}
+
+.remove i {
+  font-size: 25px;
+}
+
+body {
+  background: url(../images/bruno-kelzer-LvySG1hvuzI-unsplash\ \(1\).jpg) no-repeat;
+}
+
+.grey-bg {
+  background-color: rgba(146, 146, 146, 0.829);
+}
+
+.remove {
+  background-color: transparent;
+}
+
+input {
+  background-color: rgba(255, 255, 255, 0.507);
+}
